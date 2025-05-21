@@ -1,0 +1,204 @@
+DEBUG - 2025-05-13 05:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 05:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 06:06:52 --> ErrorException: Undefined array key "kode_jurusan"
+[Method: GET, Route: man_pengguna]
+in APPPATH/Views/man_pengguna/v_man_pengguna.php on line 48.
+ 1 APPPATH/Views/man_pengguna/v_man_pengguna.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_jurusan"', '/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_pengguna/v_man_pengguna.php', 48)
+ 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_pengguna/v_man_pengguna.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('man_pengguna/v_man_pengguna', [], true)
+ 5 APPPATH/Controllers/Man_pengguna.php(25): view('man_pengguna/v_man_pengguna', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Man_pengguna->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_pengguna))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 06:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 06:19:28 --> Error: Call to undefined function set_value()
+[Method: GET, Route: login]
+in APPPATH/Views/auth/login.php on line 58.
+ 1 SYSTEMPATH/View/View.php(224): include()
+ 2 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('auth/login', [], true)
+ 4 APPPATH/Controllers/AuthController.php(43): view('auth/login', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 06:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 06:32:33 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: superadmin]
+in APPPATH/Views/layouts/header.php on line 46.
+ 1 APPPATH/Views/layouts/header.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', '/Applications/MAMP/htdocs/Simpds_mu/app/Views/layouts/header.php', 46)
+ 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/Simpds_mu/app/Views/layouts/header.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render('layouts/header', null, true)
+ 5 APPPATH/Views/superadmin/index.php(1): CodeIgniter\View\View->include('layouts/header')
+ 6 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/Simpds_mu/app/Views/superadmin/index.php')
+ 7 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 8 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('superadmin/index', [], true)
+ 9 APPPATH/Controllers/SuperAdmin.php(14): view('superadmin/index', [...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Superadmin->index()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 06:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 06:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 13:20:14 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "dosen')"
+[Method: GET, Route: dosen%27%29]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('dosen\')')
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle('dosen\')')
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 13:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 13:30:45 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: datasekolah]
+in APPPATH/Views/man_sekolah/v_man_sekolah.php on line 23.
+ 1 APPPATH/Views/man_sekolah/v_man_sekolah.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', '/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_sekolah/v_man_sekolah.php', 23)
+ 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_sekolah/v_man_sekolah.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('man_sekolah/v_man_sekolah', [], true)
+ 5 APPPATH/Controllers/Man_sekolah.php(25): view('man_sekolah/v_man_sekolah', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Man_sekolah->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 13:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 13:33:36 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: datasekolah]
+in APPPATH/Views/man_sekolah/v_man_sekolah.php on line 23.
+ 1 APPPATH/Views/man_sekolah/v_man_sekolah.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', '/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_sekolah/v_man_sekolah.php', 23)
+ 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/Simpds_mu/app/Views/man_sekolah/v_man_sekolah.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('man_sekolah/v_man_sekolah', [], true)
+ 5 APPPATH/Controllers/Man_sekolah.php(25): view('man_sekolah/v_man_sekolah', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Man_sekolah->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 13:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 13:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 14:21:32 --> Error: Call to undefined function set_value()
+[Method: GET, Route: datasekolah/createsekolah]
+in APPPATH/Views/man_sekolah/c_man_sekolah.php on line 64.
+ 1 SYSTEMPATH/View/View.php(224): include()
+ 2 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('man_sekolah/c_man_sekolah', [], true)
+ 4 APPPATH/Controllers/Man_sekolah.php(36): view('man_sekolah/c_man_sekolah', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Man_sekolah->createsekolah()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/Applications/MAMP/htdocs/Simpds_mu/public/index.php')
+DEBUG - 2025-05-13 14:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 14:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

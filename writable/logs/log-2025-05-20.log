@@ -1,0 +1,947 @@
+DEBUG - 2025-05-20 01:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-20 01:54:11 --> mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list' in D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kela...', 0)
+#1 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kela...')
+#2 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kela...')
+#3 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kela...', Array, false)
+#4 D:\wamp64\www\app_sekolah\app\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\wamp64\www\app_sekolah\app\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+#6 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+#7 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+#8 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\wamp64\www\app_sekolah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\wamp64\\www\\a...')
+#13 {main}
+CRITICAL - 2025-05-20 01:54:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+[Method: GET, Route: admin_kelas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 2 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:54:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 4 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:54:11 --> [Caused by] mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 5 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 01:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-20 01:55:02 --> mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list' in D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kela...', 0)
+#1 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kela...')
+#2 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kela...')
+#3 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kela...', Array, false)
+#4 D:\wamp64\www\app_sekolah\app\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\wamp64\www\app_sekolah\app\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+#6 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+#7 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+#8 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\wamp64\www\app_sekolah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\wamp64\\www\\a...')
+#13 {main}
+CRITICAL - 2025-05-20 01:55:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+[Method: GET, Route: admin_kelas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 2 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:55:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 4 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:55:02 --> [Caused by] mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 5 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 01:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-20 01:55:26 --> mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list' in D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kela...', 0)
+#1 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kela...')
+#2 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kela...')
+#3 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kela...', Array, false)
+#4 D:\wamp64\www\app_sekolah\app\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\wamp64\www\app_sekolah\app\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+#6 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+#7 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+#8 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\wamp64\www\app_sekolah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\wamp64\\www\\a...')
+#13 {main}
+CRITICAL - 2025-05-20 01:55:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+[Method: GET, Route: admin_kelas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 2 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:55:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 4 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-20 01:55:26 --> [Caused by] mysqli_sql_exception: Unknown column 'sm_bentuk_pendidikan.sekolah' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_kelas`.*, `sm_bentuk_pendidikan`.`sekolah`
+FROM `sm_kelas`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_kelas`.`bentuk_pendidikan_id`', [], false)
+ 5 APPPATH\Models\Model_admin_kesiswaan.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin_kelas.php(30): App\Models\Model_admin_kesiswaan->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 01:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:56:55 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin_kelas]
+in APPPATH\Views\admin\kesiswaan\kelas\v_kelas.php on line 84.
+ 1 APPPATH\Views\admin\kesiswaan\kelas\v_kelas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\kelas\\v_kelas.php', 84)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\kelas\\v_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/kelas/v_kelas', [], true)
+ 5 APPPATH\Controllers\Admin_kelas.php(33): view('admin/kesiswaan/kelas/v_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 01:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:57:15 --> ErrorException: Undefined array key "is_active"
+[Method: GET, Route: admin_kelas]
+in APPPATH\Views\admin\kesiswaan\kelas\v_kelas.php on line 97.
+ 1 APPPATH\Views\admin\kesiswaan\kelas\v_kelas.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_active"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\kelas\\v_kelas.php', 97)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\kelas\\v_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/kelas/v_kelas', [], true)
+ 5 APPPATH\Controllers\Admin_kelas.php(33): view('admin/kesiswaan/kelas/v_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_kelas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_kelas))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 01:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:25:00 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 135.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 135)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:25:25 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 165.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 165)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:32:29 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 113.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 113)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:32:36 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 113.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 113)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:32:37 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 113.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 113)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:32:38 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 113.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 113)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:32:39 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 113.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 113)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:46:53 --> ErrorException: Undefined variable $base_url
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 33.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $base_url', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:49:00 --> ErrorException: Undefined variable $v
+[Method: GET, Route: admin_siswa/createsiswa]
+in APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php on line 72.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $v', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php', 72)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/c_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(44): view('admin/kesiswaan/siswa/c_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->createsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 02:49:21 --> ErrorException: Undefined variable $v
+[Method: GET, Route: admin_siswa/createsiswa]
+in APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php on line 72.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $v', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php', 72)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/c_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(44): view('admin/kesiswaan/siswa/c_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->createsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 02:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:12:50 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_siswa/createsiswa]
+in APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php on line 146.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php', 146)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/c_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(44): view('admin/kesiswaan/siswa/c_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->createsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 03:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:59:38 --> ErrorException: include(D:\wamp64\www\app_sekolah\vendor\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin_siswa/createsiswa]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory', 'D:\\wamp64\\www\\app_sekolah\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php')
+ 4 APPPATH\Controllers\Admin_siswa.php(19): Composer\Autoload\ClassLoader->loadClass('App\\Models\\Model_admin_kesiswaan')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin_siswa->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 03:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:59:47 --> ErrorException: include(D:\wamp64\www\app_sekolah\vendor\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin_siswa]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory', 'D:\\wamp64\\www\\app_sekolah\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php')
+ 4 APPPATH\Controllers\Admin_siswa.php(19): Composer\Autoload\ClassLoader->loadClass('App\\Models\\Model_admin_kesiswaan')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin_siswa->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 03:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:59:49 --> ErrorException: include(D:\wamp64\www\app_sekolah\vendor\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin_siswa/createsiswa]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory', 'D:\\wamp64\\www\\app_sekolah\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php')
+ 4 APPPATH\Controllers\Admin_siswa.php(19): Composer\Autoload\ClassLoader->loadClass('App\\Models\\Model_admin_kesiswaan')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin_siswa->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 03:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:59:49 --> ErrorException: include(D:\wamp64\www\app_sekolah\vendor\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin_siswa]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory', 'D:\\wamp64\\www\\app_sekolah\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php')
+ 4 APPPATH\Controllers\Admin_siswa.php(19): Composer\Autoload\ClassLoader->loadClass('App\\Models\\Model_admin_kesiswaan')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin_siswa->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 03:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 03:59:50 --> ErrorException: include(D:\wamp64\www\app_sekolah\vendor\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin_siswa]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php): Failed to open stream: No such file or directory', 'D:\\wamp64\\www\\app_sekolah\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\wamp64\\www\\app_sekolah\\vendor\\composer/../../app/Models/Model_admin_kesiswaan.php')
+ 4 APPPATH\Controllers\Admin_siswa.php(19): Composer\Autoload\ClassLoader->loadClass('App\\Models\\Model_admin_kesiswaan')
+ 5 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin_siswa->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 04:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 04:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 05:03:32 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin_siswa/createsiswa]
+in APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php on line 121.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\c_siswa.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php', 121)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\c_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/c_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(45): view('admin/kesiswaan/siswa/c_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->createsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 05:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 05:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 06:57:46 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin_siswa/detail/1]
+in APPPATH\Views\admin\kesiswaan\siswa\d_siswa.php on line 121.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\d_siswa.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\d_siswa.php', 121)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\d_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/d_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(133): view('admin/kesiswaan/siswa/d_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 06:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 06:58:32 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin_siswa/detail/1]
+in APPPATH\Views\admin\kesiswaan\siswa\d_siswa.php on line 60.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\d_siswa.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\d_siswa.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\d_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/d_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(133): view('admin/kesiswaan/siswa/d_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 06:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 07:12:14 --> ErrorException: Undefined variable $kelas
+[Method: GET, Route: admin_siswa/edit/1]
+in APPPATH\Views\admin\kesiswaan\siswa\u_siswa.php on line 121.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\u_siswa.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\u_siswa.php', 121)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\u_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/u_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(145): view('admin/kesiswaan/siswa/u_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 07:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 07:21:09 --> ErrorException: Undefined variable $nis
+[Method: POST, Route: admin_siswa/updateGo]
+in APPPATH\Controllers\Admin_siswa.php on line 193.
+ 1 APPPATH\Controllers\Admin_siswa.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nis', 'D:\\wamp64\\www\\app_sekolah\\app\\Controllers\\Admin_siswa.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->updateGo()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 07:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 07:26:10 --> ErrorException: Undefined array key "nama_kelas"
+[Method: GET, Route: admin_siswa]
+in APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php on line 158.
+ 1 APPPATH\Views\admin\kesiswaan\siswa\v_siswa.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php', 158)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\admin\\kesiswaan\\siswa\\v_siswa.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kesiswaan/siswa/v_siswa', [], true)
+ 5 APPPATH\Controllers\Admin_siswa.php(31): view('admin/kesiswaan/siswa/v_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-20 07:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 07:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

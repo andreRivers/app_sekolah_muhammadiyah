@@ -1,0 +1,187 @@
+DEBUG - 2025-05-15 01:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 01:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 02:34:57 --> ErrorException: Undefined array key "is_active"
+[Method: GET, Route: datasekolah]
+in APPPATH\Views\man_sekolah\v_man_sekolah.php on line 102.
+ 1 APPPATH\Views\man_sekolah\v_man_sekolah.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_active"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\v_man_sekolah.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\v_man_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('man_sekolah/v_man_sekolah', [], true)
+ 5 APPPATH\Controllers\Man_sekolah.php(26): view('man_sekolah/v_man_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-15 02:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 02:35:40 --> ErrorException: Undefined array key "is_active"
+[Method: GET, Route: datasekolah]
+in APPPATH\Views\man_sekolah\v_man_sekolah.php on line 102.
+ 1 APPPATH\Views\man_sekolah\v_man_sekolah.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_active"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\v_man_sekolah.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\v_man_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('man_sekolah/v_man_sekolah', [], true)
+ 5 APPPATH\Controllers\Man_sekolah.php(26): view('man_sekolah/v_man_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-15 02:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-15 02:36:40 --> mysqli_sql_exception: Duplicate entry '0' for key 'sm_sekolah.PRIMARY' in D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sm...', 0)
+#1 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm...')
+#2 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm...')
+#3 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm...', Array, false)
+#4 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\wamp64\www\app_sekolah\app\Controllers\Man_sekolah.php(69): CodeIgniter\Model->insert(Array)
+#8 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Man_sekolah->storesekolah()
+#9 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+#10 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\wamp64\www\app_sekolah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\wamp64\www\app_sekolah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\wamp64\\www\\a...')
+#15 {main}
+CRITICAL - 2025-05-15 02:36:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'sm_sekolah.PRIMARY'
+[Method: POST, Route: datasekolah/storesekolah]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (:kode_sekolah:, :sekolah:, :telp_sekolah:, :bentuk_pendidikan:, :active_sekolah:, :alamat:, :provinsi:, :kelurahan:, :kecamatan:, :kode_pos:, :akreditasi:, :kepala_sekolah:, :sts_kepemilikan:, :sk_pendirian:, :tgl_pendirian:, :sk_izin_operasional:, :tgl_sk_izin_operasional:, :at_created:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Man_sekolah.php(69): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->storesekolah()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-15 02:36:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'sm_sekolah.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (\'1002\', \'SMP MUHAMMADIYAH 0032\', \'082365653858\', \'SMP\', \'1\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'default.pdf\', \'-\', \'default.pdf\', \'-\', \'2025-05-15 02:36:40\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (\'1002\', \'SMP MUHAMMADIYAH 0032\', \'082365653858\', \'SMP\', \'1\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'default.pdf\', \'-\', \'default.pdf\', \'-\', \'2025-05-15 02:36:40\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (:kode_sekolah:, :sekolah:, :telp_sekolah:, :bentuk_pendidikan:, :active_sekolah:, :alamat:, :provinsi:, :kelurahan:, :kecamatan:, :kode_pos:, :akreditasi:, :kepala_sekolah:, :sts_kepemilikan:, :sk_pendirian:, :tgl_pendirian:, :sk_izin_operasional:, :tgl_sk_izin_operasional:, :at_created:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Man_sekolah.php(69): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->storesekolah()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+CRITICAL - 2025-05-15 02:36:40 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'sm_sekolah.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (\'1002\', \'SMP MUHAMMADIYAH 0032\', \'082365653858\', \'SMP\', \'1\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'default.pdf\', \'-\', \'default.pdf\', \'-\', \'2025-05-15 02:36:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (\'1002\', \'SMP MUHAMMADIYAH 0032\', \'082365653858\', \'SMP\', \'1\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'default.pdf\', \'-\', \'default.pdf\', \'-\', \'2025-05-15 02:36:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (\'1002\', \'SMP MUHAMMADIYAH 0032\', \'082365653858\', \'SMP\', \'1\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'-\', \'default.pdf\', \'-\', \'default.pdf\', \'-\', \'2025-05-15 02:36:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_sekolah` (`kode_sekolah`, `sekolah`, `telp_sekolah`, `bentuk_pendidikan`, `active_sekolah`, `alamat`, `provinsi`, `kelurahan`, `kecamatan`, `kode_pos`, `akreditasi`, `kepala_sekolah`, `sts_kepemilikan`, `sk_pendirian`, `tgl_pendirian`, `sk_izin_operasional`, `tgl_sk_izin_operasional`, `at_created`) VALUES (:kode_sekolah:, :sekolah:, :telp_sekolah:, :bentuk_pendidikan:, :active_sekolah:, :alamat:, :provinsi:, :kelurahan:, :kecamatan:, :kode_pos:, :akreditasi:, :kepala_sekolah:, :sts_kepemilikan:, :sk_pendirian:, :tgl_pendirian:, :sk_izin_operasional:, :tgl_sk_izin_operasional:, :at_created:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Man_sekolah.php(69): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->storesekolah()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-15 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 07:58:59 --> ErrorException: Undefined array key "bentuk_sekolah"
+[Method: GET, Route: datasekolah/detail/1]
+in APPPATH\Views\man_sekolah\d_man_sekolah.php on line 59.
+ 1 APPPATH\Views\man_sekolah\d_man_sekolah.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bentuk_sekolah"', 'D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\d_man_sekolah.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah\\app\\Views\\man_sekolah\\d_man_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('man_sekolah/d_man_sekolah', [], true)
+ 5 APPPATH\Controllers\Man_sekolah.php(88): view('man_sekolah/d_man_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Man_sekolah->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Man_sekolah))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah\\public\\index.php')
+DEBUG - 2025-05-15 07:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
