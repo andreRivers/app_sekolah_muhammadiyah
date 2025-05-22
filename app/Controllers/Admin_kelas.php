@@ -31,7 +31,6 @@ class Admin_kelas extends Controller
     }
 
 
-
     public function store()
     {
         $nama_kelas = $this->request->getPost('nama_kelas');

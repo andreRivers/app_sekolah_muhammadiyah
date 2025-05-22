@@ -1,0 +1,1479 @@
+DEBUG - 2025-05-22 01:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:05:43 --> mysqli_sql_exception: Table 'db_sds.sm_siswa' doesn't exist in D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_sisw...', 0)
+#1 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_sisw...')
+#2 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_sisw...')
+#3 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_sisw...', Array, false)
+#4 D:\laragon\www\app_sekolah_muhammadiyah\app\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\app_sekolah_muhammadiyah\app\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+#6 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+#7 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+#8 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\laragon\www\app_sekolah_muhammadiyah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-05-22 02:05:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_sds.sm_siswa' doesn't exist
+[Method: GET, Route: admin_siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 2 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:05:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_sds.sm_siswa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 4 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:05:43 --> [Caused by] mysqli_sql_exception: Table 'db_sds.sm_siswa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 5 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:05:45 --> mysqli_sql_exception: Table 'db_sds.sm_siswa' doesn't exist in D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_sisw...', 0)
+#1 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_sisw...')
+#2 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_sisw...')
+#3 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_sisw...', Array, false)
+#4 D:\laragon\www\app_sekolah_muhammadiyah\app\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\app_sekolah_muhammadiyah\app\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+#6 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+#7 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+#8 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\laragon\www\app_sekolah_muhammadiyah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-05-22 02:05:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_sds.sm_siswa' doesn't exist
+[Method: GET, Route: admin_siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 2 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:05:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_sds.sm_siswa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 4 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:05:45 --> [Caused by] mysqli_sql_exception: Table 'db_sds.sm_siswa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sm_siswa`.*, `sm_bentuk_pendidikan`.`bentuk_pendidikan`, `sm_kelas`.`nama_kelas`, `sm_users`.*
+FROM `sm_siswa`
+LEFT JOIN `sm_bentuk_pendidikan` ON `sm_bentuk_pendidikan`.`id_bentuk_pendidikan` = `sm_siswa`.`bentuk_pendidikan_id`
+LEFT JOIN `sm_kelas` ON `sm_kelas`.`id_kelas` = `sm_siswa`.`kelas_id`
+LEFT JOIN `sm_users` ON `sm_users`.`kode_person` = `sm_siswa`.`nis`', [], false)
+ 5 APPPATH\Models\Model_admin_siswa.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin_siswa.php(29): App\Models\Model_admin_siswa->getSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_siswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_siswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:37:42 --> mysqli_sql_exception: Unknown column 'sekolah_kode' in 'field list' in D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sm...', 0)
+#1 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm...')
+#2 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm...')
+#3 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm...', Array, false)
+#4 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\BaseModel.php(754): CodeIgniter\Model->insert(Array, false)
+#8 D:\laragon\www\app_sekolah_muhammadiyah\app\Controllers\Admin_jabatan.php(33): CodeIgniter\BaseModel->save(Array)
+#9 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+#10 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+#11 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\laragon\www\app_sekolah_muhammadiyah\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\laragon\www\app_sekolah_muhammadiyah\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-05-22 02:37:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sekolah_kode' in 'field list'
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (:kode_jabatan:, :sekolah_kode:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin_jabatan.php(33): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:37:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sekolah_kode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (\'KS\', \' 10001\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (\'KS\', \' 10001\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (:kode_jabatan:, :sekolah_kode:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin_jabatan.php(33): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+CRITICAL - 2025-05-22 02:37:42 --> [Caused by] mysqli_sql_exception: Unknown column 'sekolah_kode' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (\'KS\', \' 10001\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (\'KS\', \' 10001\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (\'KS\', \' 10001\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sm_jabatan` (`kode_jabatan`, `sekolah_kode`) VALUES (:kode_jabatan:, :sekolah_kode:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(754): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin_jabatan.php(33): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:39:33 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(809): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(40): CodeIgniter\Model->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:40:43 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(809): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(40): CodeIgniter\Model->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:50:28 --> ErrorException: Undefined array key "nama_jabatan"
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 83.
+ 1 APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_jabatan"', 'D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php', 83)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 5 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:52:26 --> ErrorException: Undefined array key "sekolah_kode"
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 85.
+ 1 APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sekolah_kode"', 'D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 5 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:52:49 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 166.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:52:52 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 166.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:53:19 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 166.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:53:21 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 166.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:53:24 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 166.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:53:52 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 02:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 02:59:53 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:01:55 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:02:22 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:02:32 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:04:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:05:01 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: admin_jabatan/store]
+in SYSTEMPATH\BaseModel.php on line 829.
+ 1 SYSTEMPATH\BaseModel.php(829): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(64): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:06:29 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Model_admin_jabatan::getBentukJabatan
+[Method: GET, Route: admin_jabatan]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Admin_jabatan.php(26): CodeIgniter\Model->__call('getBentukJabatan', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:40:43 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:40:47 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:42:11 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:42:19 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:44:49 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:44:51 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:46:43 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:48:05 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:48:06 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:52:28 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:53:03 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 171.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:53:25 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 171.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:53:28 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 03:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:56:51 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:59:07 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:59:20 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 03:59:21 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 03:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:02:16 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:03:04 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:03:06 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:03:07 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:06:21 --> ErrorException: Undefined variable $id_jabatan
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 171.
+ 1 APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_jabatan', 'D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php', 171)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\jabatan\\v_jabatan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 5 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:06:54 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 171.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:11:05 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:13:15 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:15:44 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:15:45 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:16:40 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:17:37 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:17:38 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:17:38 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:21:13 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:21:30 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 171.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:28:53 --> ParseError: syntax error, unexpected token ";", expecting variable or "{" or "$"
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 3 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:29:21 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:29:28 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:07 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:09 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:10 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:18 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:19 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:22 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:30:33 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:34:59 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResultArray()
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Models\Model_admin_jabatan.php on line 21.
+ 1 APPPATH\Controllers\Admin_jabatan.php(26): App\Models\Model_admin_jabatan->getAll()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:35:34 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:35:53 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 84.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:36:21 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getAll()
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Models\Model_admin_jabatan.php on line 26.
+ 1 APPPATH\Controllers\Admin_jabatan.php(26): App\Models\Model_admin_jabatan->getBentukJabatan()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:38:54 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 84.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:39:04 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:41:20 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:44:06 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:44:40 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:48:10 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:48:11 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:48:11 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:49:53 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:50:06 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 04:50:07 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: admin_jabatan]
+in APPPATH\Views\admin\kepegawaian\jabatan\v_jabatan.php on line 169.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/jabatan/v_jabatan', [], true)
+ 4 APPPATH\Controllers\Admin_jabatan.php(28): view('admin/kepegawaian/jabatan/v_jabatan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_jabatan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_jabatan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-22 04:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 04:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

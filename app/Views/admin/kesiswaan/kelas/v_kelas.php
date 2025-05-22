@@ -159,7 +159,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input hidden type="text" id="sekolah_kode" name="sekolah_kode"
+                        <input type="text" id="sekolah_kode" name="sekolah_kode"
                             value=" <?= session('sekolah_kode'); ?>" readonly class="form-control" required>
                     </div>
                 </div>
