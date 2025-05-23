@@ -3,6 +3,9 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\Model_admin_jabatan;
+use App\Models\Model_admin_kelas;
+use App\Models\Model_admin_pegawai;
 
 class Admin_pegawai extends Controller
 {
@@ -11,6 +14,7 @@ class Admin_pegawai extends Controller
         $data = [
             'title' => 'List Pegawai',
             'act_mn_kepegawaian' => 'menu-open',
+            'act_mn_kepeg' => 'active',
             'act_mn_pegawai' => 'active',
 
         ];
@@ -21,7 +25,10 @@ class Admin_pegawai extends Controller
     public function create()
     {
         $data = [
-            'title' => 'Tambah Data'
+            'title' => 'Tambah Data',
+            'act_mn_kepegawaian' => 'menu-open',
+            'act_mn_kepeg' => 'active',
+            'act_mn_pegawai' => 'active',
         ];
 
         return view('admin/kepegawaian/pegawai/c_pegawai', $data);

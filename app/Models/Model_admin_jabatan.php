@@ -16,8 +16,9 @@ class Model_admin_jabatan extends Model
     {
         $kelompok =  session()->get('sekolah_kode');
         $builder = $this->db->table('sm_jabatan');
-        $builder->join('sm_sekolah', 'sm_sekolah.kode_sekolah = sm_jabatan.kode_sekolah', 'left');
-        $builder->where('sm_jabatan.kode_sekolah', $kelompok);
+        $builder->select('sm_jabatan.*,  sm_bentuk_pendidikan.bentuk_pendidikan');
+        $builder->join('sm_bentuk_pendidikan', 'sm_bentuk_pendidikan.id_bentuk_pendidikan = sm_jabatan.bentuk_pendidikan_id', 'left');
+        $builder->where('sm_jabatan.sekolah_kode', $kelompok);
         return $builder->get()->getResultArray();
     }
 

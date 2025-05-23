@@ -146,25 +146,45 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/admin_ajaran"
+                                    <a href="/admin_tahun_ajaran"
                                         class="nav-link <?= isset($act_mn_ajaran) ? $act_mn_ajaran : '' ?>">
                                         <i class=" far fa-circle nav-icon"></i>
                                         <p>Tahun Ajaran</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin_kenaikan"
-                                        class="nav-link <?= isset($act_mn_pindah) ? $act_mn_pindah : '' ?>">
+                                    <a href="/admin_semester"
+                                        class="nav-link <?= isset($act_mn_semester) ? $act_mn_semester : '' ?>">
                                         <i class=" far fa-circle nav-icon"></i>
-                                        <p>Kenaikan/Pindah Kelas</p>
+                                        <p>Semester</p>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a href="/admin_kelulusan"
-                                        class="nav-link <?= isset($act_mn_lulus) ? $act_mn_lulus : '' ?>">
+                                    <a href="/admin_jam_pelajaran"
+                                        class="nav-link <?= isset($act_mn_jam) ? $act_mn_jam : '' ?>">
                                         <i class=" far fa-circle nav-icon"></i>
-                                        <p>Kelulusan</p>
+                                        <p>Jam Pelajaran</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin_jadwal_pelajaran"
+                                        class="nav-link <?= isset($act_mn_jadwal) ? $act_mn_jadwal : '' ?>">
+                                        <i class=" far fa-circle nav-icon"></i>
+                                        <p>Jadwal Pelajaran</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin_presensi_harian"
+                                        class="nav-link <?= isset($act_mn_harian) ? $act_mn_harian : '' ?>">
+                                        <i class=" far fa-circle nav-icon"></i>
+                                        <p>Presensi Harian</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin_presensi_pelajaran"
+                                        class="nav-link <?= isset($act_mn_presensi) ? $act_mn_presensi : '' ?>">
+                                        <i class=" far fa-circle nav-icon"></i>
+                                        <p>Presensi Harian</p>
                                     </a>
                                 </li>
 

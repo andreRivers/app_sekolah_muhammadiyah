@@ -5,14 +5,16 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Model_admin_jabatan;
 use App\Models\Model_admin_kelas;
+use App\Models\Model_admin_pegawai;
 
 class Admin_jabatan extends Controller
 {
-    protected $maj, $mak;
+    protected $maj, $mak, $map;
     public function __construct()
     {
         $this->maj = new Model_admin_jabatan();
         $this->mak = new Model_admin_kelas();
+        $this->map = new Model_admin_pegawai();
     }
 
     public function index()
@@ -20,9 +22,10 @@ class Admin_jabatan extends Controller
         $data = [
             'title' => 'List Jabatan',
             'act_mn_kepegawaian' => 'menu-open',
+            'act_mn_kepeg' => 'active',
             'act_mn_kepeg2' => 'active',
             'bentuk_pendidikan' => $this->mak->getBentukPendidikan(),
-            'v' => $this->maj->getBentukJabatan(),
+            'v' => $this->maj->getAll(),
         ];
         return view('admin/kepegawaian/jabatan/v_jabatan', $data);
     }

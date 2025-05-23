@@ -14,8 +14,8 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?= base_url('dosen') ?>">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="#">Kepegawaian</a></li>
-                        <li class="breadcrumb-item active">Jabatan Pegawai</li>
+                        <li class="breadcrumb-item"><a href="#">Akademik</a></li>
+                        <li class="breadcrumb-item active">Tahun Ajaran</li>
                     </ol>
                 </div>
             </div>
@@ -64,24 +64,28 @@
                 <?php endif; ?>
                 <div class="table-responsive">
                     <table id="example1" class="table table-bordered table-striped table-sm">
-
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Kode Jabatan</th>
-                                <th>Nama Jabatan</th>
-                                <th>Unit Sekolah</th>
+                                <th>Tahun Ajaran</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($v as $row) : ?>
+                            <?php
+                            $no = 1;
+                            foreach ($v as $row) : ?>
                                 <tr>
-                                    <td><?= $i++; ?></td>
-                                    <td><?= $row['kode_jabatan']; ?></td>
-                                    <td><?= $row['jabatan']; ?></td>
-                                    <td><?= $row['bentuk_pendidikan']; ?></td>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $row['tahun_ajaran']; ?></td>
+                                    <td> <?php
+                                            if ($row['sts_tahun_ajaran'] == 1) {
+                                                echo '<span class="badge badge-success">Aktif</span> ';
+                                            } else {
+                                                echo '<span class="badge badge-danger">Tidak Aktif</span>';
+                                            }
+                                            ?></td>
                                     <td>
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-primary dropdown-toggle"
@@ -90,14 +94,21 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a href="#" class="dropdown-item" data-toggle="modal"
-                                                    data-target="#modalEdit<?= $row['id_jabatan']; ?>">Edit</a>
+                                                    data-target="#modalEdit<?= $row['id_tahun_ajaran']; ?>">Edit</a>
+                                                <?php if ($row['sts_tahun_ajaran'] == 0): ?>
+                                                    <a href="<?= base_url('admin_tahun_ajaran/on/' . $row['id_tahun_ajaran']) ?>"
+                                                        class="dropdown-item">Aktif</a>
+                                                <?php else: ?>
+                                                    <a href="<?= base_url('admin_tahun_ajaran/off/' . $row['id_tahun_ajaran']) ?>"
+                                                        class="dropdown-item">Tidak Aktif</a>
+                                                <?php endif; ?>
+
                                             </div>
                                         </div>
 
                                     </td>
                                 </tr>
-
-                            <?php endforeach; ?>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
@@ -118,40 +129,33 @@
 <!-- Modal Tambah -->
 <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
-        <form action="<?= base_url('admin_jabatan/store') ?>" enctype="multipart/form-data" autocomplete="off"
+        <form action="<?= base_url('admin_tahun_ajaran/store') ?>" enctype="multipart/form-data" autocomplete="off"
             method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah Jabatan Pegawai</h5>
+                    <h5 class="modal-title">Tahun Ajaran</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-
                     <div class="form-group">
-                        <label>Bentuk Pendidikan</label>
-                        <select id="bentuk_pendidikan_id" name="bentuk_pendidikan_id" class="form-control selectx"
-                            required>
-                            <option selected disabled value="">Pilih</option>
-                            <?php foreach ($bentuk_pendidikan as $row5) : ?>
-                                <option value="<?= $row5['id_bentuk_pendidikan']; ?>"><?= $row5['bentuk_pendidikan']; ?> -
-                                    <?= $row5['keterangan']; ?></option>
-                            <?php endforeach ?>
+                        <label>Tahun Awal</label>
+                        <select id="tahun_ajaran" name="tahun_ajaran" class="form-control" required>
+                            <option value="">Pilih Tahun Ajaran</option>
+                            <?php
+                            $tahun_sekarang = date('Y');
+                            for ($i = 0; $i < 10; $i++) {
+                                $awal = $tahun_sekarang - $i;
+                                $akhir = $awal + 1;
+                                $value = "$awal/$akhir";
+                                echo "<option value=\"$value\">$value</option>";
+                            }
+                            ?>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>Kode Jabatan</label>
-                        <input type="text" id="kode_jabatan" name="kode_jabatan" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Nama Jabatan</label>
-                        <input type="text" id="nama_jabatan" name="nama_jabatan" class="form-control" required>
-                    </div>
-
-
 
                     <div class="form-group">
                         <input hidden type="text" id="sekolah_kode" name="sekolah_kode"
-                            value="<?= session('sekolah_kode'); ?>" readonly class="form-control" required>
+                            value=" <?= session('sekolah_kode'); ?>" readonly class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -163,53 +167,37 @@
     </div>
 </div>
 
-<!-- MODAL EDIT -->
 <?php foreach ($v as $row) : ?>
-    <div class="modal fade" id="modalEdit<?= $row['id_jabatan']; ?>" tabindex="-1" role="dialog">
+    <div class="modal fade" id="modalEdit<?= $row['id_tahun_ajaran']; ?>" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-            <form action="<?= base_url('admin_jabatan/edit/' . $row['id_jabatan']) ?>" method="post">
-                <iv class="modal-content">
+            <form action="<?= base_url('admin_tahun_ajaran/edit/' . $row['id_tahun_ajaran']) ?>" method="post">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Jabatan Pegawai</h5>
+                        <h5 class="modal-title">Edit Tahun Ajaran</h5>
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input hidden type="text" id="id_jabatan" name="id_jabatan" value="<?= $row['id_jabatan'] ?>"
-                                class="form-control" readonly required>
-                        </div>
-                        <div class="form-group">
-                            <label>Bentuk Pendidikan</label>
-                            <select id="bentuk_pendidikan_id" name="bentuk_pendidikan_id" class="form-control selectx"
-                                required>
-                                <option disabled value="">Pilih</option>
-                                <?php foreach ($bentuk_pendidikan as $row5) : ?>
-                                    <option value="<?= $row5['id_bentuk_pendidikan']; ?>"
-                                        <?= ($row5['id_bentuk_pendidikan'] == $row['bentuk_pendidikan_id']) ? 'selected' : '' ?>>
-                                        <?= $row5['bentuk_pendidikan']; ?> - <?= $row5['keterangan']; ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Kode Jabatan</label>
-                            <input type="text" id="kode_jabatan" name="kode_jabatan" value="<?= $row['kode_jabatan']; ?>"
-                                class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Nama Jabatan</label>
-                            <input type="text" id="jabatan" name="jabatan" value="<?= $row['jabatan']; ?>"
-                                class="form-control" required>
-                        </div>
-
+                    <div class="form-group">
+                        <label>Tahun Awal</label>
+                        <select id="tahun_ajaran" name="tahun_ajaran" class="form-control" required>
+                            <option value="">Pilih Tahun Ajaran</option>
+                            <?php
+                            $tahun_sekarang = date('Y');
+                            for ($i = 0; $i < 10; $i++) {
+                                $awal = $tahun_sekarang - $i;
+                                $akhir = $awal + 1;
+                                $value = "$awal/$akhir";
+                                echo "<option value=\"$value\">$value</option>";
+                            }
+                            ?>
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Update</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                     </div>
+                </div>
+            </form>
         </div>
-        </form>
-    </div>
     </div>
 <?php endforeach; ?>
 

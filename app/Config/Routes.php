@@ -82,3 +82,21 @@ $routes->group('admin_pegawai', function ($routes) {
     $routes->post('updateGo', 'Admin_pegawai::updateGo');
     $routes->get('importData', 'Admin_pegawai::importData');
 });
+
+
+
+// ADMINISTRATOR AKADEMIK - TAHUN AJARAN 
+$routes->group('admin_tahun_ajaran', function ($routes) {
+    $routes->get('/', 'Admin_Akademik\Admin_tahun_ajaran::index');
+    $routes->post('store', 'Admin_Akademik\Admin_tahun_ajaran::store');
+    $routes->post('edit/(:num)', 'Admin_Akademik\Admin_tahun_ajaran::edit/$1');
+    $routes->get('on/(:any)', 'Admin_Akademik\Admin_tahun_ajaran::activate/$1', ['filter' => 'auth:1,2']);
+    $routes->get('off/(:any)', 'Admin_Akademik\Admin_tahun_ajaran::deactivate/$1', ['filter' => 'auth:1,2']);
+});
+
+// ADMINISTRATOR AKADEMIK - SEMESTER
+$routes->group('admin_semester', function ($routes) {
+    $routes->get('/', 'Admin_Akademik\Admin_semester::index');
+    $routes->post('store', 'Admin_Akademik\Admin_semester::store');
+    $routes->post('edit/(:num)', 'Admin_Akademik\Admin_semester::edit/$1');
+});

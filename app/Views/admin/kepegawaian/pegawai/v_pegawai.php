@@ -30,7 +30,8 @@
 
             <div class="card-header">
                 <div class="d-grid gap-2 d-md-block">
-                    <a href="/admin_pegawai/create"><button class="btn btn-primary" type="button"><i class="fa fa-plus"></i> Tambah</button></a>
+                    <a href="/admin_pegawai/create"><button class="btn btn-primary" type="button"><i
+                                class="fa fa-plus"></i> Tambah</button></a>
                     <button class="btn btn-info" type="button"><i class="fa fa-upload"></i> Upload Pegawai</button>
                     <button class="btn btn-success" type="button"><i class="fa fa-print"></i> Cetak</button>
                 </div>
@@ -81,26 +82,7 @@
                         <tbody>
 
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
 
-                                <td>
-                                    <div class="d-grid gap-2 d-md-block">
-                                        <a href="#"><button class="btn btn-warning" type="button"><i class="fa fa-edit"></i></button></a>
-                                        <button class="btn btn-success" type="button"><i class="fa fa-print"></i></button>
-                                        <button class="btn btn-danger" type="button"><i class="fa fa-trash"></i></button>
-                                    </div>
-                                    <!-- <button class="btn btn-block bg-gradient-warning">
-                                        <i class="fa fa-edit"></i> </button>
-                                    <button class="btn btn-block bg-gradient-success">
-                                        <i class="fa fa-print"></i> </button> -->
-                                </td>
                             </tr>
 
 
