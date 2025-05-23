@@ -94,7 +94,7 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a href="#" class="dropdown-item" data-toggle="modal"
-                                                    data-target="#modalEdit<?= $v['id_jabatan']; ?> ">Edit</a>
+                                                    data-target="#modalEdit <?= $v['id_jabatan']; ?>">Edit</a>
                                             </div>
                                         </div>
 
@@ -166,7 +166,7 @@
 
 <!-- MODAL EDIT -->
 <?php foreach ($v as $v) : ?>
-    <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog">
+    <div class="modal fade" id="modalEdit tabindex=" -1" role="dialog">
         <div class="modal-dialog" role="document">
             <form action="" method="post">
                 <iv class="modal-content">

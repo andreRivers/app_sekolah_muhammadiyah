@@ -21,7 +21,6 @@ class Admin_jabatan extends Controller
             'title' => 'List Jabatan',
             'act_mn_kepegawaian' => 'menu-open',
             'act_mn_kepeg2' => 'active',
-            'act_mn_pegawai' => 'active',
             'bentuk_pendidikan' => $this->mak->getBentukPendidikan(),
             'v' => $this->maj->getBentukJabatan(),
         ];

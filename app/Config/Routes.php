@@ -71,3 +71,14 @@ $routes->group('admin_jabatan', function ($routes) {
     $routes->post('updateGo', 'Admin_jabatan::updateGo');
     $routes->get('importData', 'Admin_jabatan::importData');
 });
+
+// ADMINISTRATOR KEPEGAWAIAN - PEGAWAI
+$routes->group('admin_pegawai', function ($routes) {
+    $routes->get('/', 'Admin_pegawai::index');
+    $routes->get('create', 'Admin_pegawai::create');
+    $routes->post('store', 'Admin_pegawai::store');
+    $routes->get('edit/(:num)', 'Admin_pegawai::edit/$1');
+    $routes->get('detail/(:num)', 'Admin_pegawai::detail/$1');
+    $routes->post('updateGo', 'Admin_pegawai::updateGo');
+    $routes->get('importData', 'Admin_pegawai::importData');
+});
