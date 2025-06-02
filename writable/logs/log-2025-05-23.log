@@ -922,3 +922,71 @@ DEBUG - 2025-05-23 08:05:16 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-05-23 08:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-23 08:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-23 08:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 08:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 08:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 08:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 08:11:44 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_pegawai/create]
+in APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php on line 120.
+ 1 APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/pegawai/c_pegawai', [], true)
+ 5 APPPATH\Controllers\Admin_pegawai.php(43): view('admin/kepegawaian/pegawai/c_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-23 08:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 08:12:04 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_pegawai/create]
+in APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php on line 120.
+ 1 APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/pegawai/c_pegawai', [], true)
+ 5 APPPATH\Controllers\Admin_pegawai.php(43): view('admin/kepegawaian/pegawai/c_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-23 08:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 08:12:06 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_pegawai/create]
+in APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php on line 120.
+ 1 APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/pegawai/c_pegawai', [], true)
+ 5 APPPATH\Controllers\Admin_pegawai.php(43): view('admin/kepegawaian/pegawai/c_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-23 08:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 08:13:18 --> ErrorException: Undefined variable $bentuk_pendidikan
+[Method: GET, Route: admin_pegawai/create]
+in APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php on line 120.
+ 1 APPPATH\Views\admin\kepegawaian\pegawai\c_pegawai.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bentuk_pendidikan', 'D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\app\\Views\\admin\\kepegawaian\\pegawai\\c_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/kepegawaian/pegawai/c_pegawai', [], true)
+ 5 APPPATH\Controllers\Admin_pegawai.php(43): view('admin/kepegawaian/pegawai/c_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin_pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin_pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\wamp64\\www\\app_sekolah_muhammadiyah\\public\\index.php')
+DEBUG - 2025-05-23 08:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 08:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

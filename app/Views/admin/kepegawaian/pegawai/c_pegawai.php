@@ -66,21 +66,21 @@
 
                                     <tr>
                                         <td>NIP <span style="color:red;">*</span> </td>
-                                        <td><input class="form-control" type="text" id="nip" name="nip"
-                                                value="<?= old('nip'); ?>" required> </td>
+                                        <td><input class="form-control" type="text" id="person_kode" name="person_kode"
+                                                value="<?= old('person_kode'); ?>" required> </td>
                                     </tr>
                                     <tr>
                                         <td>Nama Lengkap <span style="color:red;">*</span> </td>
-                                        <td><input class="form-control" type="text" id="nama_lengkap"
-                                                name="nama_lengkap" value="<?= old('nama_lengkap'); ?>" required> </td>
+                                        <td><input class="form-control" type="text" id="name" name="name"
+                                                value="<?= old('name'); ?>" required> </td>
                                     </tr>
 
                                     <tr>
                                         <td>JENIS KELAMIN <span style="color:red;"></span> </td>
                                         <td><select id="jk" name="jk" class="form-control selectx">
                                                 <option selected disabled value="">Pilih</option>
-                                                <option value="LK">LAKI - LAKI</option>
-                                                <option value="PR">PEREMPUAN</option>
+                                                <option value="Laki-laki">LAKI - LAKI</option>
+                                                <option value="Perempuan">PEREMPUAN</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -93,8 +93,8 @@
 
                                     <tr>
                                         <td>TANGGAL LAHIR <span style="color:red;"></span> </td>
-                                        <td><input class="form-control" type="date" id="tanggal_lahir"
-                                                name="tanggal_lahir" value="<?= old('tanggal_lahir'); ?>"> </td>
+                                        <td><input class="form-control" type="date" id="tgl_lahir" name="tgl_lahir"
+                                                value="<?= old('tgl_lahir'); ?>"> </td>
                                     </tr>
 
                                     <tr>
@@ -114,9 +114,14 @@
                                     <tr>
                                         <td>UNIT SEKOLAH <span style="color:red;">*</span> </td>
                                         <td>
-                                            <select id="unit_sekolah" name="unit_sekolah" class="form-control selectx"
-                                                required>
+                                            <select id="bentuk_pendidikan_id" name="bentuk_pendidikan_id"
+                                                class="form-control selectx" required>
                                                 <option selected disabled value="">Pilih</option>
+                                                <?php foreach ($bentuk_pendidikan as $row5) : ?>
+                                                    <option value="<?= $row5['id_bentuk_pendidikan']; ?>">
+                                                        <?= $row5['bentuk_pendidikan']; ?> -
+                                                        <?= $row5['keterangan']; ?></option>
+                                                <?php endforeach ?>
                                             </select>
                                         </td>
                                     </tr>
@@ -124,7 +129,7 @@
                                     <tr>
                                         <td>STATUS KEPEGAWAIAN <span style="color:red;">*</span> </td>
                                         <td>
-                                            <select id="status_kepegawaian" name="status_kepegawaian"
+                                            <select id="sts_kepegawaian" name="sts_kepegawaian"
                                                 class="form-control selectx" required>
                                                 <option selected disabled value="">Pilih</option>
                                                 <option value="Guru Tetap">Guru Tetap</option>
@@ -138,13 +143,14 @@
                                     <tr>
                                         <td>JABATAN <span style="color:red;">*</span> </td>
                                         <td>
-                                            <select id="status_kepegawaian" name="status_kepegawaian"
-                                                class="form-control selectx" required>
+                                            <select id="jabatan_id" name="jabatan_id" class="form-control selectx"
+                                                required>
                                                 <option selected disabled value="">Pilih</option>
-                                                <option value="Guru Tetap">Guru Tetap</option>
-                                                <option value="Guru Kontrak">Guru Kontrak</option>
-                                                <option value="Tendik Tetap">Tendik Tetap</option>
-                                                <option value="Tendik Kontrak">Tendik Kontrak</option>
+                                                <?php foreach ($jabatan as $row5) : ?>
+                                                    <option value="<?= $row5['id_jabatan']; ?>">
+                                                        <?= $row5['kode_jabatan']; ?> -
+                                                        <?= $row5['jabatan']; ?></option>
+                                                <?php endforeach ?>
                                             </select>
                                         </td>
                                     </tr>
@@ -152,7 +158,7 @@
                                     <tr>
                                         <td>ALAMAT <span style="color:red;"></span> </td>
                                         <td>
-                                            <textarea name="alamat" id="alamat" class="form-control selectx"
+                                            <textarea name="alamat_rumah" id="alamat_rumah" class="form-control selectx"
                                                 style="height: 150px"></textarea>
                                         </td>
                                     </tr>
@@ -160,13 +166,13 @@
                                     <tr>
                                         <td>PASSWORD DEFAULT: <span style="color:red;">123456</span> </td>
                                         <td><input class="form-control" type="text" id="password" name="password"
-                                                value="<?= old('password'); ?>" required> </td>
+                                                value="123456" readonly required> </td>
                                     </tr>
 
                                     <tr>
                                         <td>NO TELEPON/HP: <span style="color:red;"></span> </td>
-                                        <td><input class="form-control" type="text" id="no_hp" name="no_hp"
-                                                value="<?= old('no_hp'); ?>"> </td>
+                                        <td><input class="form-control" type="text" id="no_hp_pegawai"
+                                                name="no_hp_pegawai" value="<?= old('no_hp_pegawai'); ?>"> </td>
                                     </tr>
 
                                     <tr>
@@ -206,7 +212,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p><span style="color:red;">* </span>)wajib diisi.</p>
+                            <p><span style="color:red;">(*) </span>wajib diisi.</p>
                         </div>
                     </div>
                     <!-- /.card-body -->

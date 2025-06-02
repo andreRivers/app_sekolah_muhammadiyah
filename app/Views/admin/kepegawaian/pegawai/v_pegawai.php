@@ -47,21 +47,21 @@
             </div>
             <div class="card-body">
                 <?php if (session()->getFlashdata('errors')) : ?>
-                    <div class="alert alert-danger">
-                        <?= implode('<br>', session()->getFlashdata('errors')) ?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                <div class="alert alert-danger">
+                    <?= implode('<br>', session()->getFlashdata('errors')) ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <?php endif; ?>
 
                 <?php if (session()->getFlashdata('error')) : ?>
-                    <div class="alert alert-danger">
-                        <?= session()->getFlashdata('error') ?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                <div class="alert alert-danger">
+                    <?= session()->getFlashdata('error') ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <?php endif; ?>
                 <div class="table-responsive">
                     <table id="example1" class="table table-bordered table-striped table-sm">
@@ -79,14 +79,49 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
+
+
                         <tbody>
-
+                            <?php
+                            $no = 1;
+                            foreach ($v as $row) : ?>
                             <tr>
+                                <td><?= $no++; ?></td>
+                                <td><?= $row['person_kode']; ?></td>
+                                <td><?= $row['name']; ?></td>
+                                <td><?= $row['bentuk_pendidikan']; ?> (<?= $row['keterangan']; ?>)</td>
+                                <td><?= $row['jabatan']; ?></td>
+                                <td><?= $row['sts_kepegawaian']; ?></td>
+                                <td><?= $row['no_hp_pegawai']; ?></td>
 
+                                <td> <?php
+                                            if ($row['is_active'] == 0) {
+                                                echo '<span class="badge badge-danger">Tidak Aktif</span> ';
+                                            } else {
+                                                echo '<span class="badge badge-success">Aktif</span> ';
+                                            }
+                                            ?></td>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="<?= base_url('admin_pegawai/detail/' . $row['id_pegawai']) ?>"
+                                                class="dropdown-item">Detail</a>
+                                            <a href="<?= base_url('admin_pegawai/edit/' . $row['id_pegawai']) ?>"
+                                                class="dropdown-item">Edit</a>
+
+                                        </div>
+                                    </div>
+
+                                </td>
                             </tr>
-
-
+                            <?php endforeach ?>
                         </tbody>
+
                     </table>
                 </div>
             </div>
@@ -110,13 +145,13 @@
 
 
 <script>
-    $(function() {
-        $("#example1").DataTable({
-            "language": {
-                "sSearch": "Cari"
-            }
-        });
+$(function() {
+    $("#example1").DataTable({
+        "language": {
+            "sSearch": "Cari"
+        }
     });
+});
 </script>
 <script src="<?= base_url() ?>/vendor/backend/plugins/datatables/jquery.dataTables.js"></script>
 <script src="<?= base_url() ?>/vendor/backend/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>

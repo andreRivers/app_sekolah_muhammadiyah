@@ -43,18 +43,26 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
 
     public $sekolah = [
-    'kode_sekolah' => 'required|min_length[3]',
-    'sekolah' => 'required|min_length[3]',
-    'telp_sekolah' => 'required',
-    'bentuk_pendidikan' => 'required',
-    'active_sekolah' => 'required',
-     ];
+        'kode_sekolah' => 'required|min_length[3]',
+        'sekolah' => 'required|min_length[3]',
+        'telp_sekolah' => 'required',
+        'bentuk_pendidikan' => 'required',
+        'active_sekolah' => 'required',
+    ];
 
-      public $pengguna = [
-    'kode_person' => 'required|min_length[3]',
-    'email' => 'required|valid_email|is_unique[sm_users.email]',
-    'name' => 'required',
-    'sekolah_kode' => 'required',
-    'role_id' => 'required',
-     ];
+    public $pengguna = [
+        'kode_person' => 'required|min_length[3]',
+        'email' => 'required|valid_email|is_unique[sm_users.email]',
+        'name' => 'required',
+        'sekolah_kode' => 'required',
+        'role_id' => 'required',
+    ];
+
+    public $pegawai = [
+        'kode_person' => 'required|min_length[3]',
+        'email' => 'required|valid_email|is_unique[sm_users.email]',
+        'name' => 'required',
+        'sekolah_kode' => 'required',
+        'role_id' => 'required',
+    ];
 }
