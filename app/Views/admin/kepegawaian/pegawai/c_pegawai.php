@@ -207,8 +207,8 @@
 
                                     <tr>
                                         <td>FOTO: <span style="color:red;"></span> </td>
-                                        <td><input class="form-control selectx" type="file" id="foto" name="foto"
-                                                value="<?= old('foto'); ?>"> </td>
+                                        <td><input class="form-control selectx" type="file" id="image" name="image"
+                                                value="<?= old('image'); ?>"> </td>
                                     </tr>
                                 </tbody>
                             </table>
